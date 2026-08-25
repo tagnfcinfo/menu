@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#192f2d">
+  <title>Menu Digitali &amp; Esempi NFC | TagNFC</title>
+  <style>
+    :root {
+      --bg: #0f1918;
+      --card-bg: #182826;
+      --card-border: rgba(216, 163, 62, 0.2);
+      --card-hover-border: #d8a33e;
+      --text: #f5f0e5;
+      --muted: #9ba399;
+      --gold: #d8a33e;
+      --accent: #c4673e;
+      --max: 1100px;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      padding: 3rem 1.25rem 5rem;
+    }
+    
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    
+    .kicker {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+    
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    
+    h1 em {
+      color: var(--gold);
+      font-style: italic;
+    }
+    
+    p.sub {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.75rem;
+    }
+    
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 1.75rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--card-hover-border);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    }
+    
+    .badge {
+      align-self: flex-start;
+      background: rgba(216, 163, 62, 0.15);
+      color: var(--gold);
+      border: 1px solid rgba(216, 163, 62, 0.3);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    
+    .card h2 {
+      font-family: Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    
+    .card p {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+    
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--gold);
+    }
+    
+    .card-footer span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 4.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <p class="kicker">Demo &amp; Portfolio Menu NFC</p>
+      <h1>Menu Digitali <em>Interattivi</em></h1>
+      <p class="sub">Seleziona uno dei locali per visualizzare l'esperienza del menu digitale ottimizzato per smartphone e tag NFC.</p>
+    </header>
+    
+    <main class="grid">
+      <!-- Card: La Bella Sortino -->
+      <a href="./la-bella-sortino/" class="card">
+        <div>
+          <span class="badge">Pizzeria · Pizzoleria</span>
+          <h2>La Bella Sortino</h2>
+          <p>Pizze classiche e speciali, specialità pizzoli di Sortino, Vota Vota e fritti tradizionali.</p>
+        </div>
+        <div class="card-footer">
+          <span>Apri Menu &rarr;</span>
+          <span style="color: var(--muted)">Solarino (SR)</span>
+        </div>
+      </a>
+    
+      <!-- Card: Vita Cucina Paesana -->
+      <a href="./vita-cucina-paesana/" class="card">
+        <div>
+          <span class="badge">Ristorante · Cucina Tipica</span>
+          <h2>Vita Cucina Paesana</h2>
+          <p>Menu della tradizione con primi piatti, secondi tipici e specialità caserecce.</p>
+        </div>
+        <div class="card-footer">
+          <span>Apri Menu &rarr;</span>
+          <span style="color: var(--muted)">Menu Digitale</span>
+        </div>
+      </a>
+    
+      <!-- Card: Sapori del Panino da Seby -->
+      <a href="./sapori-del-panino-seby/" class="card">
+        <div>
+          <span class="badge">Paninoteca · Street Food</span>
+          <h2>Sapori del Panino da Seby</h2>
+          <p>Panini farciti al momento, combinazioni gourmet, fritti e bevande.</p>
+        </div>
+        <div class="card-footer">
+          <span>Apri Menu &rarr;</span>
+          <span style="color: var(--muted)">Menu Asporto</span>
+        </div>
+      </a>
+    
+      <!-- Card: Vanity Solarino -->
+      <a href="./vanity-solarino/" class="card">
+        <div>
+          <span class="badge">Lounge Bar · Caffetteria</span>
+          <h2>Vanity Solarino</h2>
+          <p>Colazioni, caffetteria, cocktail list, aperitivi e snack bar.</p>
+        </div>
+        <div class="card-footer">
+          <span>Apri Menu &rarr;</span>
+          <span style="color: var(--muted)">Solarino (SR)</span>
+        </div>
+      </a>
+ 
+      <!-- Card: Vittorio Emanuele -->
+      <a href="./vittorio-emanuele/" class="card">
+        <div>
+          <span class="badge">Bar · Bistrot</span>
+          <h2>Vittorio Emanuele</h2>
+          <p>Carta bevande, caffetteria, proposte bistrot e aperitivi.</p>
+        </div>
+        <div class="card-footer">
+          <span>Apri Menu &rarr;</span>
+          <span style="color: var(--muted)">Menu Digitale</span>
+        </div>
+      </a>
+ 
+      <!-- Card: Biglietto da Visita Smart -->
+      <a href="./Biglietto_da_visita/" class="card">
+        <div>
+          <span class="badge">Smart NFC</span>
+          <h2>Biglietto da Visita</h2>
+          <p>Contatti rapidi, link social, recapiti telefonici e salvataggio in rubrica.</p>
+        </div>
+        <div class="card-footer">
+          <span>Visualizza Demo &rarr;</span>
+          <span style="color: var(--muted)">vCard NFC</span>
+        </div>
+      </a>
+    </main>
+ 
+    <footer>
+      <p>&copy; TagNFC · Soluzioni digitali smart per la ristorazione</p>
+    </footer>
+  </div>
+</body>
+</html>
+
